@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Roman.Api.Domains;
@@ -23,6 +24,7 @@ namespace Roman.Api.Controllers
         }
 
         [HttpGet]
+        [Authorize]
         public IActionResult Listar()
         {
             try
@@ -39,6 +41,7 @@ namespace Roman.Api.Controllers
         }
 
         [HttpGet("{id}")]
+        [Authorize]
         public IActionResult ListarPorTema(int id)
         {
             try
@@ -55,6 +58,7 @@ namespace Roman.Api.Controllers
         }
 
         [HttpPost]
+        [Authorize]
         public IActionResult Cadastrar(Projeto projeto)
         {
             try
@@ -73,6 +77,7 @@ namespace Roman.Api.Controllers
         }
 
         [HttpPut]
+        [Authorize]
         public IActionResult Atualizar(Projeto novoProjeto)
         {
             try

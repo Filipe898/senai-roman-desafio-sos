@@ -12,3 +12,17 @@ C:\Users\47822980807\Downloads\Roman-API\Roman.Api\Roman.Api\obj\Debug\netcoreap
 C:\Users\47822980807\Downloads\Roman-API\Roman.Api\Roman.Api\bin\Debug\netcoreapp2.1\Roman.Api.pdb
 C:\Users\47822980807\Downloads\Roman-API\Roman.Api\Roman.Api\obj\Debug\netcoreapp2.1\Roman.Api.dll
 C:\Users\47822980807\Downloads\Roman-API\Roman.Api\Roman.Api\obj\Debug\netcoreapp2.1\Roman.Api.pdb
+C:\Users\36864133885\Desktop\senai-roman-desafio-sos-master\Roman-API\Roman.Api\Roman.Api\bin\Debug\netcoreapp2.1\Roman.Api.deps.json
+C:\Users\36864133885\Desktop\senai-roman-desafio-sos-master\Roman-API\Roman.Api\Roman.Api\bin\Debug\netcoreapp2.1\Roman.Api.runtimeconfig.json
+C:\Users\36864133885\Desktop\senai-roman-desafio-sos-master\Roman-API\Roman.Api\Roman.Api\bin\Debug\netcoreapp2.1\Roman.Api.runtimeconfig.dev.json
+C:\Users\36864133885\Desktop\senai-roman-desafio-sos-master\Roman-API\Roman.Api\Roman.Api\bin\Debug\netcoreapp2.1\Roman.Api.dll
+C:\Users\36864133885\Desktop\senai-roman-desafio-sos-master\Roman-API\Roman.Api\Roman.Api\bin\Debug\netcoreapp2.1\Roman.Api.pdb
+C:\Users\36864133885\Desktop\senai-roman-desafio-sos-master\Roman-API\Roman.Api\Roman.Api\obj\Debug\netcoreapp2.1\Roman.Api.csprojAssemblyReference.cache
+C:\Users\36864133885\Desktop\senai-roman-desafio-sos-master\Roman-API\Roman.Api\Roman.Api\obj\Debug\netcoreapp2.1\Roman.Api.csproj.CoreCompileInputs.cache
+C:\Users\36864133885\Desktop\senai-roman-desafio-sos-master\Roman-API\Roman.Api\Roman.Api\obj\Debug\netcoreapp2.1\Roman.Api.RazorAssemblyInfo.cache
+C:\Users\36864133885\Desktop\senai-roman-desafio-sos-master\Roman-API\Roman.Api\Roman.Api\obj\Debug\netcoreapp2.1\Roman.Api.RazorAssemblyInfo.cs
+C:\Users\36864133885\Desktop\senai-roman-desafio-sos-master\Roman-API\Roman.Api\Roman.Api\obj\Debug\netcoreapp2.1\Roman.Api.AssemblyInfoInputs.cache
+C:\Users\36864133885\Desktop\senai-roman-desafio-sos-master\Roman-API\Roman.Api\Roman.Api\obj\Debug\netcoreapp2.1\Roman.Api.AssemblyInfo.cs
+C:\Users\36864133885\Desktop\senai-roman-desafio-sos-master\Roman-API\Roman.Api\Roman.Api\obj\Debug\netcoreapp2.1\Roman.Api.RazorTargetAssemblyInfo.cache
+C:\Users\36864133885\Desktop\senai-roman-desafio-sos-master\Roman-API\Roman.Api\Roman.Api\obj\Debug\netcoreapp2.1\Roman.Api.dll
+C:\Users\36864133885\Desktop\senai-roman-desafio-sos-master\Roman-API\Roman.Api\Roman.Api\obj\Debug\netcoreapp2.1\Roman.Api.pdb

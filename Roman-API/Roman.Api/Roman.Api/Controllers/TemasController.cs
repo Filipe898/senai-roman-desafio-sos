@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Roman.Api.Domains;
@@ -22,6 +23,7 @@ namespace Roman.Api.Controllers
         }
 
         [HttpGet]
+        [Authorize]
         public IActionResult ListarTemas()
         {
             try
@@ -38,6 +40,7 @@ namespace Roman.Api.Controllers
         }
 
         [HttpPost]
+        [Authorize]
         public IActionResult Cadastrar(Tema tema)
         {
             try
@@ -55,6 +58,7 @@ namespace Roman.Api.Controllers
         }
 
         [HttpPut]
+        [Authorize]
         public IActionResult Atualizar(Tema tema)
         {
             try
