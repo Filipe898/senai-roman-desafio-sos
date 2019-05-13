@@ -18,7 +18,7 @@
     "Roman.Api": {
       "commandName": "Project",
       "launchBrowser": true,
-      "applicationUrl": "http://localhost:5000",
+      "applicationUrl": "http://192.168.3.70:5000", //O IP aqui tem que ser do computador onde está rodando.
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }

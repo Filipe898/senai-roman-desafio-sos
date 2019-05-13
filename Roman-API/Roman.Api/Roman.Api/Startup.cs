@@ -53,6 +53,16 @@ namespace Roman.Api
             {
                 c.SwaggerDoc("v1", new Info { Title = "Roman API", Version = "v1" });
             });
+
+            //Sem o cors, não dá para logar no react.
+            services.AddCors(options =>
+            {
+                options.AddPolicy("CorsPolicy",
+                    builder => builder.AllowAnyOrigin()
+                        .AllowAnyMethod()
+                        .AllowAnyHeader()
+                        .AllowCredentials());
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -75,6 +85,8 @@ namespace Roman.Api
             });
 
             app.UseAuthentication();
+
+            app.UseCors(builder => builder.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin());
 
             app.UseMvc();
         }

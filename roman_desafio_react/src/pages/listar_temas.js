@@ -4,15 +4,8 @@ import {StyleSheet, Text, View} from 'react-native';
 import {
     StyleSheet,
     View,
-    Text,
-    Image,
-    ImageBackground,
-    TextInput,
-    TouchableOpacity,
-    AsyncStorage
+    Text
   } from "react-native";
-  
-import api from "../services/api";
 
 class Listar_Temas extends Component {
   render() {

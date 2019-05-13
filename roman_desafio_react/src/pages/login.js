@@ -12,8 +12,9 @@ import {
 } from "react-native";
 
 import api from "../services/api";
+import Axios from 'axios';
 
-class Login extends Component {
+export default class Login extends Component {
   static navigationOptions = {
     header: null
   };
@@ -24,57 +25,63 @@ class Login extends Component {
   }
 
   _realizarLogin = async () => {
-    //console.warn(this.state.email + this.state.senha);
 
-    const resposta = await api.post("/login", {
-      email: this.state.email,
-      senha: this.state.senha
-    });
-    
-    //console.warn(token);
-    const token = resposta.data.token;
-    await AsyncStorage.setItem("userToken", token);
-    this.props.navigation.navigate("MainNavigator");
-  };
+    //const não funcionou aqui
+    let resposta = {
+      Email: this.state.email,
+      Senha: this.state.senha
+    };
+
+    await Axios.post("http://192.168.3.70:5000/api/login", resposta, {
+      headers: {
+        "Content-Type": "application/json"
+      }
+    } )
+      .then(response => {
+        const token = response.data;
+        AsyncStorage.setItem('userToken', token);
+      })
+      .catch(error => console.warn(error));
+    this.props.navigation.navigate('Listar_Temas');
+  }
 
   render() {
     return (
-     
-        
-        <View style={styles.main}>
-          
-          <TextInput
-            style={styles.inputLogin}
-            placeholder="EMAIL"
-            placeholderTextColor="white"
-            underlineColorAndroid="#FFFFFF"
-            onChangeText={email => this.setState({ email })}
-          />
 
-          <TextInput
-            style={styles.inputLogin}
-            placeholder="SENHA"
-            placeholderTextColor="white"
-            password="true"
-            underlineColorAndroid="#FFFFFF"
-            onChangeText={senha => this.setState({ senha })}
-          />
-          <TouchableOpacity
-            style={styles.btnLogin}
-            onPress={this._realizarLogin}
-          >
-            <Text style={styles.btnLoginText}>LOGIN</Text>
-          </TouchableOpacity>
-        </View>
+      <View style={styles.main}>
+
+        <TextInput
+          style={styles.inputLogin}
+          placeholder="EMAIL"
+          placeholderTextColor="white"
+          underlineColorAndroid="#FFFFFF"
+          onChangeText={email => this.setState({ email })}
+        />
+
+        <TextInput
+          style={styles.inputLogin}
+          placeholder="SENHA"
+          placeholderTextColor="white"
+          password="true"
+          underlineColorAndroid="#FFFFFF"
+          onChangeText={senha => this.setState({ senha })}
+        />
+        <TouchableOpacity
+          style={styles.btnLogin}
+          onPress={this._realizarLogin}
+        >
+          <Text style={styles.btnLoginText}>LOGIN</Text>
+        </TouchableOpacity>
+      </View>
     );
   }
 }
 
 const styles = StyleSheet.create({
-    overlay: {
-      ...StyleSheet.absoluteFillObject,
-      backgroundColor: "rgba(81, 39, 255, 0.79)"
-    },
+  overlay: {
+    ...StyleSheet.absoluteFillObject,
+    backgroundColor: "rgba(81, 39, 255, 0.79)"
+  },
   main: {
     backgroundColor: "blue",
     width: "100%",
@@ -117,5 +124,3 @@ const styles = StyleSheet.create({
     fontSize: 10
   }
 });
-
-export default Login;
